@@ -7,9 +7,9 @@ a = Analysis(
     # Windows: dist\\main.py
     # Linux/MacOS: dist/main.py
     ['dist\\main.py'],
-    # đường dẫn gốc của project D:/NIX/Project/Python/Client/AdapterApp
-    # khi sử dụng pyarmor, thì pathex trỏ vào thư mục D:/NIX/Project/Python/Client/AdapterApp/dist/main.py
-    pathex=['D:/NIX/Project/Python/Client/AdapterApp/dist/main.py'],  
+    # đường dẫn gốc của project <your source code path>/AdapterApp
+    # khi sử dụng pyarmor, thì pathex trỏ vào thư mục <your source code path>/dist/main.py
+    pathex=['<your source code path>/AdapterApp/dist/main.py'],  
     binaries=[],
     #datas=[('config.json.enc', '.'),('dist/pyarmor_runtime_000000/*', 'pyarmor_runtime_000000')], 
     datas=[
