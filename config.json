@@ -1,21 +1,21 @@
 {
  "database_source": {
      "db_type": "oracle",
-     "user": "nix",
-     "password": "123456",
-     "host": "203.162.92.15",
-     "port": 1521,
-     "service_name": "ONEDATA",
+     "user": "x",
+     "password": "pwd",
+     "host": "ip add",
+     "port": <port number>,
+     "service_name": "x",
      "db_name": ""
  },
  "database_target": {
      "db_type": "mssql",
-     "user": "sa",
-     "password": "@@ODH#2025#BVMAT",
-     "host": "203.162.92.34",
-     "port": 1433,
-     "service_name": "ONEDATA",
-     "db_name": "ODH_DATA_Transaction"
+     "user": "a",
+     "password": "your pwd",
+     "host": "ip add",
+     "port": <port number>,
+     "service_name": "x",
+     "db_name": "dbname"
  },
  "qwertyytrewq": "smmXifOW0RXBsXNV_gmOB0nUBO-szbZxq61GwbGISe8="
 }
