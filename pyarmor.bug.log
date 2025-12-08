@@ -1,0 +1,12 @@
+[BUG]: no found input "Client\AdapterApp"
+
+## Command Line
+D:\NIX\Project\Python\.venv\Scripts\pyarmor gen --recursive .\Client\AdapterApp\
+
+## Environments
+Python 3.14.0
+Pyarmor 9.2.1 (trial), 000000, non-profits
+Platform windows.x86_64
+Native windows.amd64
+Home C:\Users\TxdRazer17\.pyarmor
+
