@@ -105,7 +105,9 @@ macOS
 Linux
 
 ./Python_Desktop_Collect_Data
+
 13. Screen shot
+    
 <img width="516" height="308" alt="image" src="https://github.com/user-attachments/assets/c1edb79e-337f-4401-8060-4e1c14190e1d" />
 <img width="1267" height="987" alt="image" src="https://github.com/user-attachments/assets/ee69e47d-6c5f-4532-bc7b-f8a8932e1312" />
 
