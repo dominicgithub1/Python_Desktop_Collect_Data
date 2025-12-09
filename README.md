@@ -1,32 +1,110 @@
-#Cài gói(kết nối csdl với sql server) trong môi trường ảo
-Bash: <PROJECT PATH> pip install pyodbc
+1. Yêu cầu hệ thống
 
-#Cài gói(kết nối csdl với oracle) trong môi trường ảo
-Bash: <PROJECT PATH> pip install oracledb
+Python 3.10+
 
-#Cài gói(kết nối csdl với postgresql) trong môi trường ảo
-Bash: <PROJECT PATH> pip install psycopg2
+pip và virtualenv
 
-#Cài gói để xuất excel
-Bash: <PROJECT PATH> pip install pandas openpyxl
+Hệ điều hành: Windows / macOS / Linux
 
-#Cài gói để đóng gói phần mềm cho Windows, MacOS, Linux
-Bash: <PROJECT PATH> pip install PyInstaller
-Bash: <PROJECT PATH> pip install --upgrade PyInstaller pyinstaller-hooks-contrib
+Đã cài đặt các SDK/phần mềm phụ thuộc nếu cần:
 
-#Chạy file encode.py để tạo ra secrect.key và tạo config.json.enc
+SQL Server Native Client (nếu dùng pyodbc)
 
-#Cài gói pyarmor để tăng bảo mật code.
-Bash: <PROJECT PATH> pip install pyarmor
+Oracle Instant Client (nếu dùng oracledb)
 
-#Sử dụng pyarmor
-Bash: pyarmor gen --recursive .\Client\AdapterApp\
+Qt Designer (kèm theo PySide6)
 
-#Đóng gói bằng cách chạy main.spec
-Bash: pyinstaller --distpath D:\OutputFolder\  .\Client\AdapterApp\main.spec
-#Sử dụng Qt Designer để kéo thả UI designer như winform. Từ đường dẫn thư mục .venv\Scripts hãy chạy dòng lệnh: 
-Bash: <PROJECT PATH>pyside6-designer
+2. Cấu trúc thư mục dự án (tham khảo)
+Project/
+│── Client/
+│   └── AdapterApp/
+│       ├── main.py
+│       ├── main.spec
+│       ├── ui/
+│       │   ├── my_form.ui
+│       │   └── my_form.py
+│       ├── modules/
+│       ├── services/
+│       └── ...
+│── encode.py
+│── config.json
+│── README.md
+└── .venv/
 
-#Sau khi đã thiết kế UI trên Qt Designer(.ui) thì trích xuất qua code Python(.py): 
-Bash: <PROJECT PATH>pyside6-uic <ĐƯỜNG DẪN LƯU FILE .ui>my_form.ui -o <ĐƯỜNG DẪN LƯU FILE .py>my_form.py
+3. Create Virtual Environment
+Create venv
+python -m venv .venv
 
+Activate venv
+
+Windows
+
+.\.venv\Scripts\activate
+
+macOS / Linux
+
+source .venv/bin/activate
+
+4. Install Database Connector Packages
+SQL Server
+pip install pyodbc
+
+Oracle
+pip install oracledb
+
+PostgreSQL
+pip install psycopg2
+
+5. Install Excel Export Packages
+pip install pandas openpyxl
+
+6. Install Packaging Tools
+pip install PyInstaller
+pip install --upgrade PyInstaller pyinstaller-hooks-contrib
+
+7. Generate Encryption Key & Encrypted Config
+
+Run the script:
+
+python encode.py
+
+This will generate:
+
+secret.key
+config.json.enc
+
+8. Install PyArmor for Source Code Protection
+pip install pyarmor
+
+Encrypt source files:
+pyarmor gen --recursive .\Client\AdapterApp\
+
+9. Package Application with PyInstaller
+pyinstaller --distpath <your path>\OutputFolder\ <your path>\main.spec
+
+Output will be located at:
+
+<your path>\OutputFolder\<app_name>\
+
+10. Design UI with Qt Designer
+
+Launch Qt Designer from the virtual environment:
+
+pyside6-designer
+
+11. Convert .ui File to .py File
+pyside6-uic <path>/my_form.ui -o <path>/my_form.py
+
+12. Run Application After Packaging
+
+Windows
+
+<output_folder>\AdapterApp.exe
+
+macOS
+
+./AdapterApp.app
+
+Linux
+
+./AdapterApp
