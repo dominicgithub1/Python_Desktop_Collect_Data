@@ -74,7 +74,7 @@ config.json.enc
 pip install pyarmor
 
 Encrypt source files:
-pyarmor gen --recursive .\Client\AdapterApp\
+pyarmor gen --recursive .\Client\Python_Desktop_Collect_Data\
 
 9. Package Application with PyInstaller
 pyinstaller --distpath <your path>\OutputFolder\ <your path>\main.spec
@@ -96,12 +96,17 @@ pyside6-uic <path>/my_form.ui -o <path>/my_form.py
 
 Windows
 
-<output_folder>\AdapterApp.exe
+<output_folder>\Python_Desktop_Collect_Data.exe
 
 macOS
 
-./AdapterApp.app
+./Python_Desktop_Collect_Data.app
 
 Linux
 
-./AdapterApp
+./Python_Desktop_Collect_Data
+13. Screen shot
+<img width="516" height="308" alt="image" src="https://github.com/user-attachments/assets/c1edb79e-337f-4401-8060-4e1c14190e1d" />
+<img width="1267" height="987" alt="image" src="https://github.com/user-attachments/assets/ee69e47d-6c5f-4532-bc7b-f8a8932e1312" />
+
+
