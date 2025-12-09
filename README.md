@@ -17,17 +17,14 @@ Qt Designer (kèm theo PySide6)
 2. Cấu trúc thư mục dự án (tham khảo)
 Project/
 │── Client/
-│   └── AdapterApp/
+│   └── Python_Desktop_Collect_Data/
 │       ├── main.py
 │       ├── main.spec
 │       ├── ui/
-│       │   ├── my_form.ui
+│       │   ├── my_form_ui.py
 │       │   └── my_form.py
-│       ├── modules/
-│       ├── services/
-│       └── ...
+│       └── infrastucture
 │── encode.py
-│── config.json
 │── README.md
 └── .venv/
 
